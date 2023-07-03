@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddressCheckActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="详情" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabIndicator="@drawable/layer_tab_main"
+        app:tabIndicatorColor="@color/color_main"
+        app:tabIndicatorFullWidth="false"
+        android:paddingBottom="5dp"
+        app:tabMode="fixed"
+        android:background="@color/white"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/color_333333"
+        app:tabTextAppearance="@style/TabLayoutTextUnSelected"
+        app:tabTextColor="@color/color_999999" />
+
+    <com.sszt.basis.weight.CanScrollViewPager
+        android:id="@+id/view_pager_address"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+</LinearLayout>

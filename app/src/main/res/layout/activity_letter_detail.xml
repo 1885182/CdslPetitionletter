@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".petition.LetterDetailActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="信访详情" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ceshiDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:text="剩余天数：10天"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/letterProblemAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/letterProblemAddress" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_main_shape"
+                    android:gravity="center"
+                    android:text="信"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="信访人信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/color_line" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/letterNameTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="姓名:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterName" />
+
+
+                <TextView
+                    android:id="@+id/letterName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/letterNameTip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/letterNameLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterName" />
+
+
+                <TextView
+                    android:id="@+id/letterContactsNumberTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="联系人数:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterContactsNumber"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterContactsNumber" />
+
+
+                <TextView
+                    android:id="@+id/letterContactsNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterNameLine" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterContactsNumber"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@+id/adapter_linear"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_e9b04f_shape"
+                    android:gravity="center"
+                    android:text="信"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="信访情况"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/color_line" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:id="@+id/letterProblemAddressTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="问题发生地:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterProblemAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterProblemAddress" />
+
+
+                <TextView
+                    android:id="@+id/letterProblemAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/letterProblemAddressTip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/letterProblemAddressLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterProblemAddress" />
+
+
+                <TextView
+                    android:id="@+id/letterAddressInfoTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="详细地址:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterAddressInfo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterAddressInfo" />
+
+
+                <TextView
+                    android:id="@+id/letterAddressInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterProblemAddressLine" />
+
+
+                <View
+                    android:id="@+id/letterAddressInfoLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterAddressInfo" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addProposerCLBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterAddressInfoLine"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/letterTimeTip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:text="发生时间:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/letterTime"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/letterTime" />
+
+
+                    <TextView
+                        android:id="@+id/letterTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="130dp"
+                        android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:id="@+id/letterTimeLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:background="@color/color_line"
+                        app:layout_constraintTop_toBottomOf="@+id/letterTime" />
+
+                    <TextView
+                        android:id="@+id/letterProblemTypeTip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:text="问题分类:"
+                        android:textColor="@color/color_030303"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/letterProblemType"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/letterProblemType" />
+
+
+                    <TextView
+                        android:id="@+id/letterProblemType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="130dp"
+                        android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/letterTimeLine" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:background="@color/color_line"
+                        app:layout_constraintTop_toBottomOf="@+id/letterProblemType" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/letterKeyWordTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="关键词:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterKeyWord"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterKeyWord" />
+
+
+                <TextView
+                    android:id="@+id/letterKeyWord"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerCLBy" />
+
+                <View
+                    android:id="@+id/letterKeyWordLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterKeyWord" />
+
+
+                <TextView
+                    android:id="@+id/letterHotProblemTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="热点问题:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterHotProblem"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterHotProblem" />
+
+                <TextView
+                    android:id="@+id/letterHotProblem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterKeyWordLine" />
+
+                <View
+                    android:id="@+id/letterHotProblemLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterHotProblem" />
+
+
+                <TextView
+                    android:id="@+id/letterComplaintTitleTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="投诉标题:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterComplaintTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterComplaintTitle" />
+
+                <TextView
+                    android:id="@+id/letterComplaintTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterHotProblemLine" />
+
+
+                <View
+                    android:id="@+id/letterComplaintTitleLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterComplaintTitle" />
+
+                <TextView
+                    android:id="@+id/letterComplaintContentTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="投诉内容:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterComplaintContent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterComplaintContent" />
+
+                <TextView
+                    android:id="@+id/letterComplaintContent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterComplaintTitleLine" />
+
+                <View
+                    android:id="@+id/letterComplaintContentLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterComplaintContent" />
+
+                <TextView
+                    android:id="@+id/letterFileTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="相关附件:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterFile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterFile" />
+
+                <TextView
+                    android:id="@+id/letterFile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterComplaintContentLine"
+                    app:msg="最多输入18个字符" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterFile" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:id="@+id/letterCheckView"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@+id/adapter_linear"
+                android:background="@color/color_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/letterCheckLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_main_shape"
+                    android:gravity="center"
+                    android:text="查"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="复查信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/letterCheckV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_height"
+                android:background="@color/color_line"
+                android:visibility="gone" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/letterCheckCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/letterCheckApplyTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="复查申请:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCheckApply"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCheckApply" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckApply"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/letterCheckApplyTip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/letterCheckApplyLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckApply" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckResultTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="复查结果:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCheckResult"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCheckResult" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckResult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckApplyLine" />
+
+
+                <View
+                    android:id="@+id/letterCheckResultLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckResult" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckOpinionTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="处理意见:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCheckOpinion"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCheckOpinion" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckOpinion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckResultLine" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/letterCheckViews"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@+id/adapter_linear"
+                android:background="@color/color_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/letterCheckLLs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_main_shape"
+                    android:gravity="center"
+                    android:text="核"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="复核信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"
+                android:layout_below="@+id/adapter_linear"
+                android:background="@color/color_line" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/letterCheckCLs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/letterCheckApplyTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="复核申请:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCheckApplys"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCheckApplys" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckApplys"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/letterCheckApplyTips"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/letterCheckApplyLines"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckApplys" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckResultTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="复查结果:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCheckResults"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCheckResults" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckResults"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckApplyLines" />
+
+
+                <View
+                    android:id="@+id/letterCheckResultLines"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckResults" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckOpinionTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="处理意见:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCheckOpinions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCheckOpinions" />
+
+
+                <TextView
+                    android:id="@+id/letterCheckOpinions"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCheckResultLines" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/letterCancelLLs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_main_shape"
+                    android:gravity="center"
+                    android:text="废"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="作废申请"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/letterCancelLine"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"
+                android:layout_below="@+id/adapter_linear"
+                android:background="@color/color_line" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/letterCancelCLs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/letterCancelTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="作废申请:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCancel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCancel" />
+
+
+                <TextView
+                    android:id="@+id/letterCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/letterCancelTips"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/letterCancelResultLines"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCancel" />
+
+
+                <TextView
+                    android:id="@+id/letterCancelResultTips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="审核结果:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/letterCancelResults"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/letterCancelResults" />
+
+
+                <TextView
+                    android:id="@+id/letterCancelResults"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/letterCancelResultLines" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/writLine"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"
+                android:layout_below="@+id/adapter_linear"
+                android:background="@color/color_line" />
+
+            <LinearLayout
+                android:id="@+id/writLinear"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_main_shape"
+                    android:gravity="center"
+                    android:text="业"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="业务文书"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/toTransactLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="40dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/toTransact"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/r8_main_shape"
+                    android:gravity="center"
+                    android:text="办理情况"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/toPostpone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/r8_main_shape"
+                    android:gravity="center"
+                    android:text="延期申请"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/toApply"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text=""
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/toCancels"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text="驳回"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/toList"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/r4_cf4f5f6_shape"
+                android:gravity="center"
+                android:text="返回列表"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="40dp"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

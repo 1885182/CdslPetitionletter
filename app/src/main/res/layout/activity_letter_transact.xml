@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".petition.LetterTransactActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="信访办理" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="调查情况:"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/letterTransactTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r10_cf5f5f5_shape"
+                android:hint="请输入调查情况"
+                android:maxLength="300"
+                android:padding="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:msg="最多输入300字符" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="处理意见:"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/letterTransactBot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r10_cf5f5f5_shape"
+                android:hint="请输入处理意见"
+                android:maxLength="300"
+                android:padding="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:msg="最多输入300字符" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="附件:"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/letterTransactFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r10_cf5f5f5_shape"
+                android:hint="请选择附件"
+                android:drawableRight="@mipmap/right_back2"
+                android:padding="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/letterTransactImg"
+                android:layout_width="150dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="语音批示:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=" 开始录音"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/color_999999"
+                    android:layout_height="26dp"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:drawableLeft="@mipmap/ic_microphone"
+                    android:background="@drawable/r13_999999_shape"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/toSave"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/white"
+                android:background="@drawable/r8_main_shape"
+                android:textSize="15sp"
+                android:text="提交"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

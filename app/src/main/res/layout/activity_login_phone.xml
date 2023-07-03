@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login.LoginPhoneActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_text="身份验证" />
+
+    <TextView
+        android:id="@+id/phoneTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:text="手机号"
+        android:textColor="@color/color_030303"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/phone" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/red_star"
+        app:layout_constraintStart_toEndOf="@+id/phoneTip"
+        app:layout_constraintTop_toTopOf="@+id/phoneTip" />
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@null"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout"
+        app:msg="最多输入11个字符" />
+
+    <View
+        android:id="@+id/phoneLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+
+
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <TextView
+        android:id="@+id/verificationCodeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:text="验证码"
+        android:textColor="@color/color_030303"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/verificationCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/verificationCode" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/red_star"
+        app:layout_constraintStart_toEndOf="@+id/verificationCodeTip"
+        app:layout_constraintTop_toTopOf="@+id/verificationCodeTip" />
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/verificationCode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@null"
+        android:hint="请输入验证码"
+        android:inputType="number"
+        android:maxLength="12"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLine"
+        app:msg="最多输入12个字符" />
+
+    <TextView
+        android:id="@+id/getVerificationCode"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/r8_main_shape"
+        android:gravity="center"
+        android:text="获取验证码"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/verificationCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/verificationCode" />
+
+    <View
+        android:id="@+id/verificationCodeLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCode" />
+
+
+    <TextView
+        android:id="@+id/toNext"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/dp_56"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/r8_main_shape"
+        android:gravity="center"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCodeLine" />
+
+
+
+    <TextView
+        android:id="@+id/toCancel"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/dp_56"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/r8_eee_shape"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_999999"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verificationCodeLine" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".cases.CaseInsertActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/caseInsertTL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="案件登记" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="矛盾纠纷类型:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/caseInsertDisputeType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择矛盾纠纷类型"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="纠纷发生地:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/caseInsertAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择纠纷发生地"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="详细地址:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/caseInsertAddressInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择详细地址"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="发生时间:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/caseInsertTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择时间"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="调解机构:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/caseInsertInstitution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择调解机构"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="矛盾纠纷描述:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/caseInsertDescribe"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入矛盾纠纷描述"
+                    android:maxLength="300"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:msg="最多输入300字符" />
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="证据材料:"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="单个附件不得超过10M,最多5个附件."
+                        android:textColor="#fd7402"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/addFile"
+                        android:layout_width="50dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/r8_main_shape"
+                        android:textSize="15sp"
+                        android:text="添加"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:layout_height="30dp"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerFile"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="30dp"
+                    android:layout_height="wrap_content"/>-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/toSave"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/white"
+                android:background="@drawable/r8_main_shape"
+                android:textSize="15sp"
+                android:text="提交"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

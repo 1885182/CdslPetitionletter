@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".petition.LetterCommentActivity">
+
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="信访评价" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="250dp"
+                android:background="#F8B865"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"
+                android:paddingTop="5dp"
+                android:paddingLeft="15dp"
+                android:text="对信访工作机构评价"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:text="工作人员服务态度和效率"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="服务评价："/>
+
+            <TextView
+                android:id="@+id/letterCommentPersonData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满意"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:background="@drawable/r15_61b5ce_shape"
+                android:paddingTop="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"/>
+
+            <RadioGroup
+                android:id="@+id/letterCommentPersonRG"
+                android:layout_width="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/letterCommentPersonRB1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="满意"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"/>
+
+                <RadioButton
+                    android:id="@+id/letterCommentPersonRB2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="基本满意"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"/>
+
+                <RadioButton
+                    android:id="@+id/letterCommentPersonRB3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="不满意"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"/>
+
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:paddingLeft="15dp"
+                android:text="留言："/>
+
+
+            <TextView
+                android:id="@+id/letterCommentPersonData1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:paddingLeft="15dp"/>
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/letterCommentPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r10_cf5f5f5_shape"
+                android:padding="10dp"
+                android:minHeight="70dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"/>
+
+
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:background="#F8B865"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="15dp"
+                android:text="对处理机关评价"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="工作人员服务态度、工作效率、在规定时间内做出告知、依法按政策解决信访问题、按期出具答复意见书并送达"/>
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:text="服务评价："/>
+
+            <TextView
+                android:id="@+id/letterCommentUnitData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满意"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:background="@drawable/r15_61b5ce_shape"
+                android:paddingTop="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"/>
+
+            <RadioGroup
+                android:id="@+id/letterCommentUnitRG"
+                android:layout_width="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/letterCommentUnitRB1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="满意"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"/>
+
+                <RadioButton
+                    android:id="@+id/letterCommentUnitRB2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="基本满意"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"/>
+
+                <RadioButton
+                    android:id="@+id/letterCommentUnitRB3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="不满意"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_999999"/>
+
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:paddingLeft="15dp"
+                android:text="留言："/>
+
+
+
+
+            <TextView
+                android:id="@+id/letterCommentUnitData1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:paddingLeft="15dp"/>
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/letterCommentUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r10_cf5f5f5_shape"
+                android:padding="10dp"
+                android:minHeight="70dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="14sp"/>
+
+
+
+            <TextView
+                android:id="@+id/toSave"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/white"
+                android:background="@drawable/r8_main_shape"
+                android:textSize="15sp"
+                android:text="提交"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

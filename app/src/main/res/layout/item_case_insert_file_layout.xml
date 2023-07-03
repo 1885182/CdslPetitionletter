@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/adapterCaseInsertName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/color_333333"
+        android:text="洒水"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="15dp"/>
+
+    <ImageView
+        android:id="@+id/adapterCaseInsertDel"
+        android:layout_width="40dp"
+        android:padding="15dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/red_cha"/>
+
+</LinearLayout>

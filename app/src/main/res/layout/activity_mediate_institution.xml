@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    tools:context=".cases.MediateInstitutionActivity"
+    tools:ignore="MissingDefaultResource">
+
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/caseMediateTL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="调解机构" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main">
+
+        <EditText
+            android:id="@+id/caseMediateSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/r4_cwhite_shape"
+            android:drawableStart="@mipmap/seace"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:hint="请输入调解机构名称"
+            android:minWidth="160dp"
+            android:paddingStart="@dimen/dp_12"
+            android:textColor="@color/color_c1bfbf"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

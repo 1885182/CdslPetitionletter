@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".mine.UpdatePasActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/securitySettingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_text="修改密码" />
+
+    <TextView
+        android:id="@+id/securitySettingOldTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:text="旧密码"
+        android:textColor="@color/color_030303"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/securitySettingOld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/securitySettingOld" />
+
+    <ImageView
+        android:id="@+id/securitySettingOldImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/red_star"
+        app:layout_constraintStart_toEndOf="@+id/securitySettingOldTip"
+        app:layout_constraintTop_toTopOf="@+id/securitySettingOldTip" />
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/securitySettingOld"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@null"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="end"
+        android:hint="请输入"
+        android:inputType="textPassword"
+        android:maxLength="12"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/securitySettingOldTip"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingTitle"
+        app:msg="最多输入12个字符" />
+
+    <View
+        android:id="@+id/securitySettingOldLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+
+
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingOld" />
+
+    <TextView
+        android:id="@+id/securitySettingNewTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:text="新密码"
+        android:textColor="@color/color_030303"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/securitySettingNew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/securitySettingNew" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/red_star"
+        app:layout_constraintStart_toEndOf="@+id/securitySettingNewTip"
+        app:layout_constraintTop_toTopOf="@+id/securitySettingNewTip" />
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/securitySettingNew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@null"
+        android:gravity="end"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:hint="请输入"
+        android:inputType="textPassword"
+        android:maxLength="12"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/securitySettingNewTip"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingOldLine"
+        app:msg="最多输入12个字符" />
+
+    <View
+        android:id="@+id/securitySettingNewLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingNew" />
+
+
+    <TextView
+        android:id="@+id/securitySettingAgainTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:text="确认新密码"
+        android:textColor="@color/color_030303"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@+id/securitySettingAgain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/securitySettingAgain" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_4"
+        android:src="@mipmap/red_star"
+        app:layout_constraintStart_toEndOf="@+id/securitySettingAgainTip"
+        app:layout_constraintTop_toTopOf="@+id/securitySettingAgainTip" />
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/securitySettingAgain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@null"
+        android:gravity="end"
+        android:hint="请输入"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:inputType="textPassword"
+        android:maxLength="12"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/securitySettingAgainTip"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingNewLine"
+        app:msg="最多输入12个字符" />
+
+    <View
+        android:id="@+id/securitySettingAgainLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingAgain" />
+
+    <TextView
+        android:id="@+id/securitySettingAgainLineTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="密码须6-12个字符，而且同时包含字母和数字"
+        android:textColor="@color/color_f43f1b"
+        android:visibility="gone"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingAgainLine" />
+
+    <TextView
+        android:id="@+id/securitySettingSave"
+        android:background="@drawable/r8_main_shape"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="@dimen/dp_56"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:text="确定修改"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/securitySettingAgainLineTip" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

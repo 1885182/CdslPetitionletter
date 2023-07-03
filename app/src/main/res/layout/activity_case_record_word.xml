@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".cases.CaseRecordWordActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/caseListTL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="添加笔录" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/recordWordSurveyTimeTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="调查时间："
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordSurveyTimeLL"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordSurveyTimeLL"
+                app:layout_constraintTop_toTopOf="@+id/recordWordSurveyTimeLL" />
+
+
+            <LinearLayout
+                android:id="@+id/recordWordSurveyTimeLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:drawableEnd="@mipmap/right_back2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/recordWordSurveyTimeStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="开始日期"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="至"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/recordWordSurveyTimeEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="结束日期"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="调查地点："
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordAddress"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordAddress"
+                app:layout_constraintTop_toTopOf="@+id/recordWordAddress" />
+
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/recordWordAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:hint="请输入调查地点"
+                android:maxHeight="80dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_66333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordSurveyTimeLL" />
+
+
+            <TextView
+                android:id="@+id/recordWordNameTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="调查人1："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordName"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordName"
+                app:layout_constraintTop_toTopOf="@+id/recordWordName" />
+
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/recordWordName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="75dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:hint="请输入调查人姓名"
+                android:maxLength="20"
+                android:paddingLeft="10dp"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:singleLine="true"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_66333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordAddress"
+                app:msg="最多输入20个字符" />
+
+            <TextView
+                android:id="@+id/recordWordNameAddName"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordAddress"
+                app:layout_constraintTop_toTopOf="@+id/recordWordName" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordName" />
+
+            <TextView
+                android:id="@+id/recordWordNameByTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="被调查人："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordNameBy"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordNameBy"
+                app:layout_constraintTop_toTopOf="@+id/recordWordNameBy" />
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/recordWordNameBy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:drawablePadding="@dimen/dp_6"
+                android:hint="请输入被调查人姓名"
+                android:singleLine="true"
+                android:paddingLeft="10dp"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_10"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_66333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerName" />
+
+
+            <TextView
+                android:id="@+id/recordWordRecordNameTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="记录人："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordRecordName"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordRecordName"
+                app:layout_constraintTop_toTopOf="@+id/recordWordRecordName" />
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/recordWordRecordName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:hint="请输入记录人姓名"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_66333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordNameBy"
+                app:msg="最多输入18个字符" />
+
+
+            <TextView
+                android:id="@+id/recordWordRecordWordTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="调查笔录："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordRecordWord"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordRecordWord"
+                app:layout_constraintTop_toTopOf="@+id/recordWordRecordWord" />
+
+            <com.sszt.basis.weight.EditTipView
+                android:id="@+id/recordWordRecordWord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:hint="请输入调查笔录"
+                android:minHeight="70dp"
+                android:padding="10dp"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_66333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordRecordName" />
+
+            <TextView
+                android:id="@+id/recordWordNameSignTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="调查人1签名："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordNameSign"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordRecordWord"
+                app:layout_constraintTop_toTopOf="@+id/recordWordNameSign" />
+
+
+            <ImageView
+                android:id="@+id/recordWordNameSign"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordRecordWord" />
+
+            <TextView
+                android:id="@+id/recordWordNameSignTv"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text="签名"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordNameSign"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordAddress"
+                app:layout_constraintTop_toTopOf="@+id/recordWordNameSign" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerNameSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordNameSign" />
+
+            <TextView
+                android:id="@+id/recordWordNameSignByTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="被调查人签名："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordNameSignBy"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordRecordWord"
+                app:layout_constraintTop_toTopOf="@+id/recordWordNameSignBy" />
+
+
+            <ImageView
+                android:id="@+id/recordWordNameSignBy"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerNameSign" />
+
+            <TextView
+                android:id="@+id/recordWordNameSignByTv"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text="签名"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordNameSignBy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordAddress"
+                app:layout_constraintTop_toTopOf="@+id/recordWordNameSignBy" />
+
+            <TextView
+                android:id="@+id/recordWordNameRecordSignTip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:drawableLeft="@mipmap/red_star"
+                android:text="记录人签名："
+                android:textColor="@color/color_030303"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordRecordNameSign"
+                app:layout_constraintRight_toLeftOf="@+id/recordWordRecordWord"
+                app:layout_constraintTop_toTopOf="@+id/recordWordRecordNameSign" />
+
+
+            <ImageView
+                android:id="@+id/recordWordRecordNameSign"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordNameSignBy" />
+
+            <TextView
+                android:id="@+id/recordWordRecordNameSignTv"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text="签名"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/recordWordRecordNameSign"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordAddress"
+                app:layout_constraintTop_toTopOf="@+id/recordWordRecordNameSign" />
+
+            <LinearLayout
+                android:id="@+id/toAllowLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/recordWordRecordNameSign">
+
+                <TextView
+                    android:id="@+id/toCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/color_main"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/toSave"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/r8_main_shape"
+                    android:gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

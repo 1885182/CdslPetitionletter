@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical"
+    tools:context=".cases.CaseInsertProposerActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/addProposerTl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_text="添加申请人" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/addPopulationNV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/addPopulationTl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addProposerIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/r15_main_shape"
+                    android:gravity="center"
+                    android:text="申"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/addProposerTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="申请方信息"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/r4_cwhite_shape">
+
+                <TextView
+                    android:id="@+id/addPopulationTypeTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="类型:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerType"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerType" />
+
+
+                <TextView
+                    android:id="@+id/addProposerType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:drawableEnd="@mipmap/right_back2"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:hint="请选择类型"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="15dp"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addPopulationTypeTip"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/addPopulationTypeLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerType" />
+
+
+                <TextView
+                    android:id="@+id/addProposerNameTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="申请人:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerName" />
+
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/addProposerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/dp_4"
+                    android:hint="请输入申请人姓名"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPopulationTypeLine" />
+
+
+                <View
+                    android:id="@+id/addPopulationTypeLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerName" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addProposerCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPopulationTypeLine1"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/addProposerSocialTip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:text="社会信用代码:"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/addProposerSocial"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/addProposerSocial" />
+
+
+                    <com.sszt.basis.weight.EditTipView
+                        android:id="@+id/addProposerSocial"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="130dp"
+                        android:background="@null"
+                        android:drawablePadding="@dimen/dp_4"
+                        android:hint="请输入"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_66333333"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:id="@+id/addProposerSocialLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:background="@color/color_line"
+                        app:layout_constraintTop_toBottomOf="@+id/addProposerSocial" />
+
+                    <TextView
+                        android:id="@+id/addProposerLegalPersonTip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:text="法定代表人:"
+                        android:textColor="@color/color_030303"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/addProposerLegalPerson"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/addProposerLegalPerson" />
+
+
+                    <com.sszt.basis.weight.EditTipView
+                        android:id="@+id/addProposerLegalPerson"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="130dp"
+                        android:hint="请输入"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15"
+                        android:singleLine="true"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_66333333"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/addProposerSocialLine1"
+                        app:msg="最多输入50个字符" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:background="@color/color_line"
+                        app:layout_constraintTop_toBottomOf="@+id/addProposerLegalPerson" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/addPopulationNameTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="联系电话:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerPhone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerPhone" />
+
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/addProposerPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:hint="请输入联系电话"
+                    android:inputType="phone"
+                    android:maxLength="20"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerCL"
+                    app:msg="最多输入20个字符" />
+
+                <View
+                    android:id="@+id/addPopulationNameLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerPhone" />
+
+
+                <TextView
+                    android:id="@+id/addPopulationSexTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text="其他联系方式:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerCall"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerCall" />
+
+                <TextView
+                    android:id="@+id/addProposerCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:drawableEnd="@mipmap/right_back2"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:hint="请选择"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPopulationNameLine" />
+
+                <View
+                    android:id="@+id/addProposerCallLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerCall" />
+
+
+                <TextView
+                    android:id="@+id/addProposerCallValueTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:text=":"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerCallValue"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerCallValue" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/addProposerCallValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:hint="请输入"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerCallLine" />
+
+
+                <View
+                    android:id="@+id/addProposerCallValueLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerCallValue" />
+
+                <TextView
+                    android:id="@+id/addPopulationIDCardTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="身份证号:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerIDCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerIDCard" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/addProposerIDCard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:hint="请输入身份证号"
+                    android:inputType="number"
+                    android:digits="0123456789xyzXYZ"
+                    android:maxLength="18"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerCallValueLine"
+                    app:msg="最多输入18个字符" />
+
+                <View
+                    android:id="@+id/addPopulationIDCardLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:background="@color/color_line"
+                    app:layout_constraintTop_toBottomOf="@+id/addProposerIDCard" />
+
+                <TextView
+                    android:id="@+id/addAddressTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="常住地址:"
+                    android:textColor="@color/color_030303"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/addProposerAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/addProposerAddress" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/addProposerAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:hint="请输入关键字(如小区名称)"
+                    android:inputType="textMultiLine"
+                    android:maxLines="1"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_66333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPopulationIDCardLine"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAgent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/addProposerAgent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="15dp"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:text="+添加代理人"
+                android:textColor="@color/color_main"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/saveProposer"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/r8_main_shape"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

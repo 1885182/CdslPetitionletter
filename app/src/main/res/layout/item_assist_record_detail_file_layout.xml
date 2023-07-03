@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingRight="15dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/adapter_del"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_width="40dp"
+        android:visibility="gone"
+        android:padding="15dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/red_cha"/>
+
+    <TextView
+        android:id="@+id/recordDetailFile"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/adapter_del"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/r10_cf5f5f5_shape"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp" />
+
+
+
+
+</RelativeLayout>

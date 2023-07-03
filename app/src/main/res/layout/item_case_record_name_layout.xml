@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/adapter_name_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:text="调查人："
+        android:textColor="@color/color_030303"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/adapter_name"
+        app:layout_constraintRight_toLeftOf="@+id/adapter_name"
+        app:layout_constraintTop_toTopOf="@+id/adapter_name" />
+
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/adapter_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/s1_eeeeee_shape"
+        android:hint="请输入调查人姓名"
+        android:maxLength="20"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_66333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:msg="最多输入20个字符" />
+
+    <TextView
+        android:id="@+id/adapter_name_del"
+        android:layout_width="50dp"
+        android:textColor="@color/white"
+        android:background="@drawable/r8_ff0000_shape"
+        android:textSize="15sp"
+        android:text="删除"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/adapter_name"
+        app:layout_constraintBottom_toBottomOf="@+id/adapter_name"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

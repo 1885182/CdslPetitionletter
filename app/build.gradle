@@ -1,0 +1,139 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+android {
+    namespace 'com.sszt.cdslpetitionletter'
+    compileSdk rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+
+        applicationId rootProject.ext.android.appId
+        minSdk rootProject.ext.android.minSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        xiangmu{
+            applicationId "com.sszt.cdslpetitionletter"
+            manifestPlaceholders = [APP_NAME:"信访项目"]
+            buildConfigField 'String','BASE_URL','"http://192.168.100.244:6004/"'
+        }
+        chanpin{
+            applicationId "com.sszt.petitionletter"
+            manifestPlaceholders = [APP_NAME:"信访产品"]
+            buildConfigField 'String','BASE_URL','"http://192.168.100.244:6004/"'
+        }
+
+
+        productFlavors.all {//遍历productFlavors多渠道，设置渠道号（xiaomi 、huawei）
+        flavor -> flavor.manifestPlaceholders.put("CHANNEL", name)
+        }
+    }
+
+    /*applicationVariants.all{variant ->
+        def createTime = new Date().format("YYYYMMddHHmm")
+
+        if (variant.buildType.name == "release") {
+            //  将release版本放到项目的apks文件夹下，其它编译类型使用默认生成路径即可
+            variant.getPackageApplicationProvider().get().outputDirectory = new File(project.rootDir.absolutePath + "/apks/${variant.buildType.name}/${createTime}")
+        }
+        variant.outputs.all {
+            def name = variant.productFlavors[0].metaPropertyValues.get(0).getValue().toString()+""
+            def fileName
+            fileName = "${name.substring(10,14)}_${defaultConfig.versionCode}.apk"
+            outputFileName = fileName;
+        }
+    }*/
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('E:\\AndroidStudioProjects\\CdslPetitionletter\\xinfang.jks')
+            storePassword '123456'
+            keyAlias = 'xinfang'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('E:\\AndroidStudioProjects\\CdslPetitionletter\\xinfang.jks')
+            storePassword '123456'
+            keyAlias = 'xinfang'
+            keyPassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+            productFlavors.xiangmu.signingConfig signingConfigs.release
+            productFlavors.chanpin.signingConfig signingConfigs.release
+        }
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+            productFlavors.xiangmu.signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.7.20"
+
+    implementation rootProject.ext.arouter.arouter
+    kapt rootProject.ext.arouter.compiler
+    implementation rootProject.ext.dependencies.permissionx
+//    异常上报
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+
+    implementation project(path: ':moduleresources')
+    api project(path: ':basis')
+    //api project(path: ':baidumap')
+    implementation "com.blankj:utilcode:1.30.6"
+
+
+    //百度地图
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Location_All:9.3.7'
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Search:7.5.4'
+    implementation 'com.baidu.lbsyun:BaiduMapSDK_Map:7.5.4'
+
+    //即时通讯
+    implementation "org.java-websocket:Java-WebSocket:1.4.0"
+
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".petition.LetterApplyActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="申请" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:drawableLeft="@mipmap/red_star"
+        android:text="申请说明:"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp" />
+
+    <com.sszt.basis.weight.EditTipView
+        android:id="@+id/letterApplyContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/r10_cf5f5f5_shape"
+        android:hint="请输入申请说明"
+        android:maxLength="300"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp"
+        app:msg="最多输入300字符" />
+
+
+    <TextView
+        android:id="@+id/toSave"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/r8_main_shape"
+        android:textSize="15sp"
+        android:text="提交"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

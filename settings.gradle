@@ -1,0 +1,28 @@
+pluginManagement {
+
+    repositories {
+        gradlePluginPortal()
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "CdslPetitionletter"
+include ':app'
+include ':basis'//基础包
+include ':pickerview'
+include ':wheelview'
+include ':moduleresources'//路由/图片
+include ':AibumChoose'//图片视频查看
+include ':proxy_cache'
+include ':compress'

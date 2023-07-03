@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".troubleshoot.InsertTroubleshootActivity">
+
+    <com.sszt.basis.weight.TitleLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_back_visibility="true"
+        app:title_text="添加" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/r15_main_shape"
+                        android:gravity="center"
+                        android:text="信"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="信访隐患基本信息"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="事件名称:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/eventName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入事件名称"
+                    android:singleLine="true"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="事件类别:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/eventType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择事件类别"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="事件规模:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/eventScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择事件规模"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="事件来源:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/eventSource"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择事件来源"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="发生时间:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/eventTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择发生时间"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="涉及人数:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/eventNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入涉及人数"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="涉及单位:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/eventUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入涉及单位"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="发生地点:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/eventAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择发生地点"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="事件简述:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/eventContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:minHeight="100dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入事件简述"
+                    android:layout_marginBottom="15dp"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/s1_eeeeee_shape"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/r15_main_shape"
+                        android:gravity="center"
+                        android:text="当"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="当事人信息"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="证件代码:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/cardType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择证件代码"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="证件号码:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/cardNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入证件号码"
+                    android:singleLine="true"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="姓名:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/popName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入姓名"
+                    android:singleLine="true"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="性别:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/popSex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择性别"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="民族:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/popNation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择民族"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="学历:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/popEducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择学历"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="人员类别:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/peopleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请选择人员类别"
+                    android:drawableRight="@mipmap/right_back2"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:drawableLeft="@mipmap/red_star"
+                    android:text="居住详址:"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.sszt.basis.weight.EditTipView
+                    android:id="@+id/popAddr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/r10_cf5f5f5_shape"
+                    android:hint="请输入居住详址"
+                    android:singleLine="true"
+                    android:layout_marginBottom="15dp"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/toSave"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/white"
+                android:background="@drawable/r8_main_shape"
+                android:textSize="15sp"
+                android:text="提交"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

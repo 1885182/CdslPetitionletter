@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/color_line" />
+
+
+    <LinearLayout
+        android:id="@+id/addProposerAgentLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/r15_61b5ce_shape"
+            android:gravity="center"
+            android:text="代"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/addProposerAgentTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="代理人信息"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addProposerAgentCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/r4_cwhite_shape">
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/line_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/color_line" />
+
+        <TextView
+            android:id="@+id/addProposerAgentTypeTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="代理人类型:"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerAgentType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerAgentType" />
+
+
+        <TextView
+            android:id="@+id/addProposerAgentType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:drawablePadding="@dimen/dp_6"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingEnd="15dp"
+            android:paddingBottom="@dimen/dp_15"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addProposerAgentTypeTip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+
+        <View
+            android:id="@+id/addProposerAgentTypeLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentType" />
+
+
+        <TextView
+            android:id="@+id/addProposerEntrustTypeTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="委托类型:"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerEntrustType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerEntrustType" />
+
+
+        <TextView
+            android:id="@+id/addProposerEntrustType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:background="@null"
+            android:drawablePadding="@dimen/dp_6"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingEnd="15dp"
+            android:paddingBottom="@dimen/dp_15"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentTypeLine" />
+
+
+        <View
+            android:id="@+id/addProposerEntrustTypeLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerEntrustType" />
+
+
+        <TextView
+            android:id="@+id/addProposerAgentNameTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="代理人:"
+            android:textColor="@color/color_030303"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerAgentName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerAgentName" />
+
+
+        <TextView
+            android:id="@+id/addProposerAgentName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:maxLength="50"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_15"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerEntrustTypeLine"
+            app:msg="最多输入50个字符" />
+
+        <View
+            android:id="@+id/addProposerAgentNameLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentName" />
+
+
+        <TextView
+            android:id="@+id/addProposerAgentPhoneTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="联系电话:"
+            android:textColor="@color/color_030303"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerAgentPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerAgentPhone" />
+
+        <TextView
+            android:id="@+id/addProposerAgentPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:drawablePadding="@dimen/dp_6"
+            android:inputType="phone"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingEnd="@dimen/dp_15"
+            android:paddingBottom="@dimen/dp_15"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentNameLine" />
+
+
+        <View
+            android:id="@+id/addProposerAgentPhoneLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentPhone" />
+
+        <TextView
+            android:id="@+id/addProposerAgentIDCardTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="身份证:"
+            android:textColor="@color/color_030303"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerAgentIDCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerAgentIDCard" />
+
+        <TextView
+            android:id="@+id/addProposerAgentIDCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentPhoneLine"
+            app:msg="最多输入18个字符" />
+
+        <View
+            android:id="@+id/addProposerAgentIDCardLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentIDCard" />
+
+        <TextView
+            android:id="@+id/addProposerAgentRelationTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="与当事人关系:"
+            android:textColor="@color/color_030303"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerAgentRelation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerAgentRelation" />
+
+        <TextView
+            android:id="@+id/addProposerAgentRelation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:drawablePadding="@dimen/dp_6"
+            android:inputType="textMultiLine"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:paddingEnd="@dimen/dp_15"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentIDCardLine"
+            app:msg="最多输入18个字符" />
+
+        <View
+            android:id="@+id/addProposerAgentRelationLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/color_line"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentRelation" />
+
+
+
+        <TextView
+            android:id="@+id/addProposerAgentEntrustUpTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_15"
+            android:text="授权委托书:"
+            android:textColor="@color/color_030303"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addProposerAgentEntrustUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addProposerAgentEntrustUp" />
+
+        <TextView
+            android:id="@+id/addProposerAgentEntrustUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:drawablePadding="@dimen/dp_6"
+            android:inputType="textMultiLine"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:paddingEnd="@dimen/dp_15"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_66333333"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addProposerAgentRelationLine"
+            app:msg="最多输入18个字符" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
